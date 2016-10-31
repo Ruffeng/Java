@@ -53,6 +53,7 @@ public class Order{
       this.date = date;
       this.quantity = quantity;
       this.furniture = furniture;
+      System.out.println(this.date);
    }
 
    /**
@@ -97,8 +98,8 @@ public class Order{
     * @return total amount of the order
     */
    public double totalAmount() {
-      // TODO
-      return 0.0;
+	  
+      return this.furniture.price() * this.quantity;
    }
 
    /**

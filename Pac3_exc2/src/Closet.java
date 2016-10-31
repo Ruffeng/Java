@@ -94,8 +94,11 @@ public class Closet extends Furniture{
     * the order they were introduced.
     */
    public String listOfFrontParts() {
-      // TODO
-      return null;
+		StringBuilder sb = new StringBuilder();
+	   for(FrontPart front: frontparts){
+			sb.append(front.toString());
+	   }
+      return sb.toString();
    }
 
    /**
@@ -109,11 +112,11 @@ public class Closet extends Furniture{
     */
    public double price() {
       double total_area = ( this.height *this.depth * 2)+(this. width * this.height);
-      System.out.println("The total price is : "+total_area);
-      double  total_price = total_area * this.getMaterial().getPricePerCm2()*this.getColor().getPriceFactor();
+      double  total_price = total_area * this.getMaterial().getPricePerCm2()*this.getColor().getPriceFactor()+frontPartsPrice();
+     
       return total_price;
    }
-
+   
    /**
     * This method generates and returns an String with
     * the information of the Furniture object.
@@ -125,7 +128,6 @@ public class Closet extends Furniture{
     */
 
 	public String toString() {
-		double front_totalprice = 0;
 		StringBuilder sb = new StringBuilder();
 		sb.append( NL+"  Closet made on "+getMaterial().getName()+" with color "+getColor().getName() +
 				   NL+"  Material price: "+getMaterial().getPricePerCm2()+" euros per cm2"+
@@ -135,11 +137,9 @@ public class Closet extends Furniture{
 				   NL+"  Color price factor:"+String.format("%.3f", getColor().getPriceFactor())+" euros"+ 
 				   NL+" Body price: "+String.format("%.2f",price())+" euros"+
 				   NL+" Front parts:");
-		for(FrontPart front: frontparts){
-					sb.append(front.toString());
-					front_totalprice += front.price();
-		}
-  	   sb.append(NL+"Furniture price:"+String.format("%.2f",front_totalprice+price())+NL);
+		sb.append(listOfFrontParts());
+  	   	sb.append(NL+"Furniture price:"+String.format("%.2f",frontPartsPrice()+price())+" euros"+NL);
+
 		return sb.toString(); 
 	}
 
@@ -147,8 +147,11 @@ public class Closet extends Furniture{
     * Get the price from the FrontParts of this Closet
     */
    private double frontPartsPrice() {
-     // TODO
-     return 0.0;
+	   double front_totalPrice = 0;
+	   for(FrontPart front: this.frontparts){
+			front_totalPrice += front.price();
+	   }
+     return front_totalPrice;
    }
 
 }

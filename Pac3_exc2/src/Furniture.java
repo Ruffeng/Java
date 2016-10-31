@@ -75,7 +75,7 @@ public abstract class Furniture{
     * the product identification code.
     */
    public String toString() {
-	   return "Furniture id: " + this.id + NL;
+	   return "Furniture id:" + this.id + NL;
    }
 
 }

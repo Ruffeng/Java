@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.Enumeration;
 import java.util.ArrayList;
@@ -126,9 +127,19 @@ public class Factory{
     */
    public String listOfOrders() {
       StringBuilder sb = new StringBuilder();
+      SimpleDateFormat date_formatted = new SimpleDateFormat("yyyy-MM-dd");
+      
       for( Order order: this.orders){
-    	  sb.append(NL+"Order ref: "+order.getRef());
-    	  sb.append(NL+"Order date: " +order.getDate());
+    	 /* sb.append(NL+"Order ref: "+order.getRef());
+    	  sb.append(NL+"Order date: " +date_formatted.format(order.getDate()));
+    	  sb.append(NL+"Order Information:");
+    	  sb.append(NL+"Furniture");
+    	  sb.append(NL+"Furniture id: "+order.getFurniture().getId());
+    	  sb.append(NL+"Furniture description:");
+    	  sb.append(order.getFurniture());
+    	  sb.append("Quantity:"+ order.getQuantity());
+    	  */sb.append("Total amount: "+ order.totalAmount());
+    	  sb.append(NL);
       }
       return sb.toString();
    }
