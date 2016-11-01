@@ -111,10 +111,7 @@ public class Closet extends Furniture{
     * @return price of the Furniture
     */
    public double price() {
-      double total_area = ( this.height *this.depth * 2)+(this. width * this.height);
-      double  total_price = total_area * this.getMaterial().getPricePerCm2()*this.getColor().getPriceFactor()+frontPartsPrice();
-     
-      return total_price;
+     return bodyPrice()+frontPartsPrice();
    }
    
    /**
@@ -130,15 +127,15 @@ public class Closet extends Furniture{
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append( NL+"  Closet made on "+getMaterial().getName()+" with color "+getColor().getName() +
-				   NL+"  Material price: "+getMaterial().getPricePerCm2()+" euros per cm2"+
+				   NL+"  Material price: "+String.format("%.3f",getMaterial().getPricePerCm2())+" euros per cm2"+
 				   NL+"  Width: " + width +" cm"+
 				   NL+"  Height: " + height + " cm"+
 				   NL+"  Depth: " + depth+" cm"+
 				   NL+"  Color price factor:"+String.format("%.3f", getColor().getPriceFactor())+" euros"+ 
-				   NL+" Body price: "+String.format("%.2f",price())+" euros"+
+				   NL+" Body price: "+String.format("%1$,.2f",bodyPrice())+" euros"+
 				   NL+" Front parts:");
 		sb.append(listOfFrontParts());
-  	   	sb.append(NL+"Furniture price:"+String.format("%.2f",frontPartsPrice()+price())+" euros"+NL);
+  	   	sb.append(NL+"Furniture price: "+String.format("%1$,.2f",price())+" euros"+NL);
 
 		return sb.toString(); 
 	}
@@ -152,6 +149,12 @@ public class Closet extends Furniture{
 			front_totalPrice += front.price();
 	   }
      return front_totalPrice;
+   }
+   private double bodyPrice() {
+	      double total_area = ( this.height *this.depth * 2)+(this. width * this.height);
+	      double  total_price = total_area * this.getMaterial().getPricePerCm2()*this.getColor().getPriceFactor();
+	     
+	      return total_price;
    }
 
 }

@@ -127,19 +127,8 @@ public class Factory{
     */
    public String listOfOrders() {
       StringBuilder sb = new StringBuilder();
-      SimpleDateFormat date_formatted = new SimpleDateFormat("yyyy-MM-dd");
-      
       for( Order order: this.orders){
-    	 /* sb.append(NL+"Order ref: "+order.getRef());
-    	  sb.append(NL+"Order date: " +date_formatted.format(order.getDate()));
-    	  sb.append(NL+"Order Information:");
-    	  sb.append(NL+"Furniture");
-    	  sb.append(NL+"Furniture id: "+order.getFurniture().getId());
-    	  sb.append(NL+"Furniture description:");
-    	  sb.append(order.getFurniture());
-    	  sb.append("Quantity:"+ order.getQuantity());
-    	  */sb.append("Total amount: "+ order.totalAmount());
-    	  sb.append(NL);
+    	sb.append(order.toString());
       }
       return sb.toString();
    }
@@ -156,7 +145,13 @@ public class Factory{
     */
    public String listFurnitureInPriceRange(double min, double max) {
       StringBuilder sb = new StringBuilder();
-      // TODO
+      for(Furniture item: this.furniture ){
+    	  if(min<item.price() && item.price()<max){
+    		  sb.append(NL+"Furniture ID: "+item.getId());
+        	  sb.append(NL+"Furniture Description: ");
+        	  sb.append(item.toString());
+    	  }
+      }
       return sb.toString();
    }
 
@@ -169,8 +164,14 @@ public class Factory{
     * objects are equals (see description of equals method in
     * class Order)
     */
-   public boolean removeOrder(Order order) {
-      // TODO
-      return true;
+   public boolean removeOrder(Order orderToRemove) {
+    //  boolean result = this.orders.equals(order);
+      boolean result = false;
+	  for(int i=0; i< this.orders.size(); i++){
+    	  if(this.orders.get(i).equals(orderToRemove)){
+    		  result =  true;
+    		  this.orders.remove(i);    	  }
+      }
+      return result;
    }
 }

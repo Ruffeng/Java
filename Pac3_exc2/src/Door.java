@@ -87,7 +87,7 @@ public class Door extends FrontPart{
    	return NL+"  FrontPart ID: "+getId()+
    		NL+"   FrontPart Description:"+
    		NL+"   Door made on "+getMaterial().getName()+" with color"+ getColor().getName()+
-   		NL+"   Material price: "+ getMaterial().getPricePerCm2()+" euros per cm2"+
+   		NL+"   Material price: "+String.format("%.3f", getMaterial().getPricePerCm2())+" euros per cm2"+
    		NL+"   X: "+getX()+
    		NL+"   Y: "+getY()+
    		NL+"   Color price factor: "+String.format("%.3f", getColor().getPriceFactor())+" euros"+

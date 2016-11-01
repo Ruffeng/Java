@@ -128,7 +128,7 @@ public class Main2{
 	 myF.add(new Order("O004",d.parse("16-10-2016"),2,fCloset4));
 	 myF.add(new Order("O005",d.parse("17-10-2016"),10,fBed));
 	 myF.add(new Order("O006",d.parse("17-10-2016"),5,pBed2));
-
+/*
 	 // Printing order's information:
       System.out.println("********************************");
       System.out.println("       OUTPUT OF STEP 3");
@@ -136,11 +136,11 @@ public class Main2{
       System.out.println("List of orders (in the order they were introduced)");
       System.out.println("--------------------------------------------------");
       System.out.println(myF.listOfOrders());
-/*
+*/
       // ***************************************************
       //   STEP 4 (List of furniture within a price range)
       // ***************************************************
-
+/*
       System.out.println("********************************");
       System.out.println("       OUTPUT OF STEP 4");
       System.out.println("********************************");
@@ -153,7 +153,7 @@ public class Main2{
       System.out.println("Minimum price: " + myFormat.format(min) + " euros");
       System.out.println("Maximum price: " + myFormat.format(max) + " euros" + NL);
       System.out.println(myF.listFurnitureInPriceRange(min,max));
-
+*/
       // ***************************************************
       //   STEP 5 (Removing Orders)
       // ***************************************************
@@ -163,7 +163,7 @@ public class Main2{
       System.out.println("********************************");
 
       // -- Successful case --
-      // Explanation of the context: He have to imagine that,
+      // Explanation of the context: We have to imagine that,
       // in some way, the application provides the Order
       // object to be removed from the list orders, if
       // possible; that means (according to the definition of
@@ -173,8 +173,8 @@ public class Main2{
       // To show that, we create a "target" Order object with
       // the same reference code of the second Order object
       // created previously at STEP 3 and included into the
-      // lis Orders, but with "null" values for the rest of
-      // its atributes.
+      // list Orders, but with "null" values for the rest of
+      // its attributes.
       String myRef = new String("O002");
       Order myOrder = new Order(myRef,null,0,null);
       System.out.println("Trying to remove Order with reference code: " + myRef);
@@ -182,6 +182,7 @@ public class Main2{
          System.out.println("Order object has been removed");
       else
           System.out.println("ERROR: Order object not found");
+
       // Listing the remaining Order objects at list orders
       System.out.println("List of remaining orders (in order of introduction)");
       System.out.println("---------------------------------------------------");
@@ -197,8 +198,8 @@ public class Main2{
       if (myF.removeOrder(myOrder2))
          System.out.println("Order object has been removed");
       else
-          System.out.println("ERROR: Order object not found");
-*/
+         System.out.println("ERROR: Order object not found");
+
    }
 
 }

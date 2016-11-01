@@ -1,6 +1,7 @@
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 /**
  * This class represents an order
  *
@@ -53,7 +54,6 @@ public class Order{
       this.date = date;
       this.quantity = quantity;
       this.furniture = furniture;
-      System.out.println(this.date);
    }
 
    /**
@@ -111,8 +111,19 @@ public class Order{
     *
     */
    public String toString() {
-      // TODO
-      return null;
+	   StringBuilder sb = new StringBuilder();
+	   SimpleDateFormat date_formatted = new SimpleDateFormat("dd/MM/yyyy");
+		  sb.append(NL+"Order ref: "+this.getRef());
+	 	  sb.append(NL+"Order date: " +date_formatted.format(this.getDate()));
+	 	  sb.append(NL+"Order Information:");
+	 	  sb.append(NL+"Furniture");
+	 	  sb.append(NL+"Furniture id: "+this.getFurniture().getId());
+	 	  sb.append(NL+"Furniture description:");
+	 	  sb.append(this.getFurniture());
+	 	  sb.append("Quantity:"+ this.getQuantity());
+	 	  sb.append(NL+"Total amount: "+String.format("%1$,.2f", this.totalAmount())+" euros");
+	 	  sb.append(NL);
+	 return sb.toString();
    }
 
    /**
@@ -126,9 +137,11 @@ public class Order{
     * only if, their reference codes are equals (regardless
     * the values of the rest of atributes).
     */
-   public boolean equals (Object obj) {
-      // TODO
-      return true;
+   public boolean equals (Order orderToRemove) {
+	   String origin = this.getRef();
+	   String destiny = orderToRemove.getRef();
+	   boolean result = origin.contains(destiny);
+	   return result;
    }
 
 }
