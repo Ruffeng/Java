@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class main {
+	public static void main(String[] args) {
+		ArrayList<String> proves = new ArrayList<String>();
+		Set beatles = new HashSet();
+		proves.add("Prova1");
+		proves.add("Prova2");
+		proves.add("Prova3");
+		proves.add("Prova4");
+		proves.add("Prova5");
+		System.out.println(proves);
+		String[] retorn = proves.toArray(new String[proves.size()]);
+		System.out.println(retorn[4]);
+		
+		beatles.add("John");
+		beatles.add("Paul");
+		beatles.add("Ringo");
+		beatles.add("George");
+	}
+}

@@ -4,16 +4,16 @@
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
-		<item value="1" key="VisibilityModifier"/>
 		<item value="true" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="504" key="DIALOG_WIDTH"/>
 		<item value="71" key="DIALOG_Y_ORIGIN"/>
-		<item value="388" key="DIALOG_X_ORIGIN"/>
 		<item value="641" key="DIALOG_HEIGHT"/>
+		<item value="388" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
@@ -22,8 +22,8 @@
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
 		<item value="356" key="DIALOG_WIDTH"/>
 		<item value="18" key="DIALOG_Y_ORIGIN"/>
-		<item value="456" key="DIALOG_HEIGHT"/>
 		<item value="90" key="DIALOG_X_ORIGIN"/>
+		<item value="456" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="quick_assist_proposal_size">
@@ -65,8 +65,8 @@
 		<section name="projects">
 			<section name="Pac2_exc1">
 				<item value="/Users/Ruffeng/Java/Pac2_exc1/doc" key="destdir"/>
-				<item value="/Users/Ruffeng/Java/Pac2_exc1/javadoc.xml" key="antpath"/>
 				<item value="" key="href"/>
+				<item value="/Users/Ruffeng/Java/Pac2_exc1/javadoc.xml" key="antpath"/>
 			</section>
 		</section>
 	</section>
@@ -87,8 +87,8 @@
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="-8" key="DIALOG_Y_ORIGIN"/>
-			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="-36" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
@@ -99,8 +99,8 @@
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="519" key="DIALOG_WIDTH"/>
 		<item value="74" key="DIALOG_Y_ORIGIN"/>
-		<item value="381" key="DIALOG_X_ORIGIN"/>
 		<item value="639" key="DIALOG_HEIGHT"/>
+		<item value="381" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="NewClassWizardPage">
@@ -111,25 +111,25 @@
 		<item value="false" key="RemoveFinal"/>
 		<item value="false" key="SortOrdering"/>
 	</section>
-	<section name="JavadocWizardDialog">
-		<item value="600" key="DIALOG_WIDTH"/>
-		<item value="110" key="DIALOG_Y_ORIGIN"/>
-		<item value="582" key="DIALOG_HEIGHT"/>
-		<item value="340" key="DIALOG_X_ORIGIN"/>
-		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
-	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="508" key="DIALOG_WIDTH"/>
 		<item value="100" key="DIALOG_Y_ORIGIN"/>
-		<item value="444" key="DIALOG_X_ORIGIN"/>
 		<item value="618" key="DIALOG_HEIGHT"/>
+		<item value="444" key="DIALOG_X_ORIGIN"/>
+		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="600" key="DIALOG_WIDTH"/>
+		<item value="110" key="DIALOG_Y_ORIGIN"/>
+		<item value="340" key="DIALOG_X_ORIGIN"/>
+		<item value="582" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
 		<item value="497" key="DIALOG_WIDTH"/>
 		<item value="159" key="DIALOG_Y_ORIGIN"/>
-		<item value="392" key="DIALOG_X_ORIGIN"/>
 		<item value="509" key="DIALOG_HEIGHT"/>
+		<item value="392" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

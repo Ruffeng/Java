@@ -176,9 +176,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "f3b8d348f73c08b1d3b1c9e3abba8ae4d682f8e9",
-    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
-    "location": "/System/Library/Java/Extensions/j3daudio.jar",
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2015-07-15T00:00:57+02:00",
+    "location": "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
     "javaRuntime": true
   },
   {
@@ -189,9 +189,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
-    "jarFileModificationDate": "2015-07-15T00:00:57+02:00",
-    "location": "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
+    "jarFileFingerprint": "f3b8d348f73c08b1d3b1c9e3abba8ae4d682f8e9",
+    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
+    "location": "/System/Library/Java/Extensions/j3daudio.jar",
     "javaRuntime": true
   },
   {
@@ -241,9 +241,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "c23bcc4ef6150ef6297efbd0bc15271c9106949f",
-    "jarFileModificationDate": "2015-07-06T22:05:16+02:00",
-    "location": "/System/Library/Java/Extensions/dns_sd.jar",
+    "jarFileFingerprint": "d20dc5e3a5fe4ee9c12e70a864cabeb628b9e7ca",
+    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
+    "location": "/System/Library/Java/Extensions/vecmath.jar",
     "javaRuntime": true
   },
   {
@@ -254,9 +254,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "d20dc5e3a5fe4ee9c12e70a864cabeb628b9e7ca",
-    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
-    "location": "/System/Library/Java/Extensions/vecmath.jar",
+    "jarFileFingerprint": "c23bcc4ef6150ef6297efbd0bc15271c9106949f",
+    "jarFileModificationDate": "2015-07-06T22:05:16+02:00",
+    "location": "/System/Library/Java/Extensions/dns_sd.jar",
     "javaRuntime": true
   }
 ]
