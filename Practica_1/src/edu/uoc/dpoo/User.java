@@ -1,4 +1,6 @@
 package edu.uoc.dpoo;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +27,7 @@ public class User {
 	 */
 	public User(String user, String pass, String fullName) {
 		this.username = user;
-		this.password = pass;
+		this.password = Encrypt.password(pass);
 		this.fullName = fullName;
 	}
 
@@ -43,7 +45,14 @@ public class User {
 	public String getUsername() {
 		return username;
 	}
-
+	/**
+	 * Getter of password
+	 * 
+	 * @return String
+	 */
+	public String getPassword() {
+		return password;
+	}
 	/**
 	 * Getter of fullname
 	 * 
@@ -60,7 +69,9 @@ public class User {
 	 * @return boolean
 	 */
 	public boolean checkPassword(String password) {
-		return false;
+		String passwordDigest = Encrypt.password(password);		
+		boolean result = (this.password.equals(passwordDigest)) ? (true):(false);
+		return result;
 	}
 
 	/**
@@ -140,6 +151,5 @@ public class User {
 			return false;
 		return true;
 	}
-	
 
 }

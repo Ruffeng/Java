@@ -1,4 +1,7 @@
 package edu.uoc.dpoo;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class Platform {
@@ -41,7 +44,16 @@ public class Platform {
 	}
 
 	public User login(String username, String password) {
-		return null;
+		String passDigested = Encrypt.password(password);
+		User userAuth = null;
+		for(User user: users){
+			
+			if(username.equals(user.getUsername()) && passDigested.equals(user.getPassword())){
+				userAuth=user;
+			}
+			 
+		}
+		return userAuth;
 	}
 
 	public int getNumUsers() {
@@ -75,4 +87,6 @@ public class Platform {
 	public ArrayList<Competition> getOpenCompetitions() {
 		return null;
 	}
+	
+	
 }
