@@ -1,5 +1,18 @@
 [
   {
+    "symbolicName": "junit",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4e031bb61df09069aeb2bffb4019e7a5034a4ee0",
+    "jarFileModificationDate": "2013-05-17T18:05:12+02:00",
+    "location": "/Applications/eclipse/plugins/org.junit_4.11.0.v201303080030/junit.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -130,6 +143,19 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "org.hamcrest.core",
+    "version": {
+      "major": 1,
+      "minor": 3,
+      "micro": 0,
+      "qualifier": "v201303031735"
+    },
+    "jarFileFingerprint": "5ed9fe32ab1d2b18bec7cac0a044090100f327ba",
+    "jarFileModificationDate": "2013-09-19T11:11:36+02:00",
+    "location": "/Applications/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -176,9 +202,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
-    "jarFileModificationDate": "2015-07-15T00:00:57+02:00",
-    "location": "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
+    "jarFileFingerprint": "f3b8d348f73c08b1d3b1c9e3abba8ae4d682f8e9",
+    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
+    "location": "/System/Library/Java/Extensions/j3daudio.jar",
     "javaRuntime": true
   },
   {
@@ -189,9 +215,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "f3b8d348f73c08b1d3b1c9e3abba8ae4d682f8e9",
-    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
-    "location": "/System/Library/Java/Extensions/j3daudio.jar",
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2015-07-15T00:00:57+02:00",
+    "location": "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
     "javaRuntime": true
   },
   {
@@ -241,9 +267,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "d20dc5e3a5fe4ee9c12e70a864cabeb628b9e7ca",
-    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
-    "location": "/System/Library/Java/Extensions/vecmath.jar",
+    "jarFileFingerprint": "c23bcc4ef6150ef6297efbd0bc15271c9106949f",
+    "jarFileModificationDate": "2015-07-06T22:05:16+02:00",
+    "location": "/System/Library/Java/Extensions/dns_sd.jar",
     "javaRuntime": true
   },
   {
@@ -254,9 +280,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "c23bcc4ef6150ef6297efbd0bc15271c9106949f",
-    "jarFileModificationDate": "2015-07-06T22:05:16+02:00",
-    "location": "/System/Library/Java/Extensions/dns_sd.jar",
+    "jarFileFingerprint": "d20dc5e3a5fe4ee9c12e70a864cabeb628b9e7ca",
+    "jarFileModificationDate": "2015-07-06T22:04:22+02:00",
+    "location": "/System/Library/Java/Extensions/vecmath.jar",
     "javaRuntime": true
   }
 ]

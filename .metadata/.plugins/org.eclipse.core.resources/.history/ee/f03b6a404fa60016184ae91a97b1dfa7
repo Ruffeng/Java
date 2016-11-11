@@ -1,0 +1,25 @@
+
+public class User {
+	/**
+	 * Attributes for User class
+	 */
+	private String username;
+	private String password;
+	private String fullName;
+	
+	/**
+	 * Constructor method for User class
+	 * @param user the username
+	 * @param pass the password
+	 * @param fullName the fullName
+	 */
+	public User(String user, String pass, String fullName){
+		this.username = user;
+		this.password = pass;
+		this.fullName = fullName;
+	}
+	
+	
+	
+	
+}

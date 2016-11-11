@@ -1,0 +1,6 @@
+
+public class Platform {
+	public User registerUser(String name,String password,String fullname){
+		return null;
+	}
+}

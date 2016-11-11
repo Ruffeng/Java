@@ -1,0 +1,13 @@
+
+public class Participant extends User{
+	/**
+	 * Constructor of PArticipants class that inheritates from Users
+	 * @param user
+	 * @param pass
+	 * @param fullName
+	 */
+	public Participant(String user, String pass, String fullName) {
+		super(user, pass, fullName);
+	}
+
+}

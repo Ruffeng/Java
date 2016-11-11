@@ -1,0 +1,67 @@
+package edu.uoc.dpoo;
+import java.util.ArrayList;
+
+public class Platform {
+	private ArrayList<User> users ;
+	
+	
+	public Platform(){
+		this.users = new ArrayList<User>();
+	}
+	
+	/**
+	 * Metods registerUser
+	 * @param name
+	 * @param password
+	 * @param fullname
+	 * @return
+	 */
+	public User registerUser(String name, String password, String fullname) {
+		User user_exist= findUser(name);
+		if (user_exist==null){
+			User new_user = new User(name,password,fullname);
+			this.users.add(new_user);
+			return new_user;
+		}
+		else{
+			System.out.println(name+" is already taken.");
+			return null;
+		}
+	}
+
+	public User login(String username, String password) {
+		return null;
+	}
+
+	public int getNumUsers() {
+		return this.users.size();
+	}
+
+	public int getNumCompetitions() {
+		return 0;
+	}
+
+	public Message sendMessage(User from, String to, String subject,
+			String message) {
+		return null;
+	}
+
+	public void evaluteAll() {
+
+	}
+
+	public User findUser(String username) {
+		
+		User result = null;
+		for(User user: users){
+			if (user.getUsername() == username){
+				result = user;
+			}
+		}
+		return result;
+	}
+
+	public ArrayList<Competition> getOpenCompetitions() {
+		return null;
+	}
+}

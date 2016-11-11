@@ -1,0 +1,16 @@
+
+public class Organizer extends User {
+
+	public void removeSubmission(Submission submission){
+	}
+	
+	public boolean sendMessage(Competition competition, String subject, String message){
+		return false;
+	}
+	
+	public Competition newCompetition(String title, Float target){
+		return null;
+	}
+	
+
+}

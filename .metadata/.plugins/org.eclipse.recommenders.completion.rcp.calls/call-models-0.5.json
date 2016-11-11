@@ -28,5 +28,10 @@
     "location": "/Users/Ruffeng/Java/Pac3_exc2/src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027/Users/Ruffeng/Java/Pac3_exc2/src\u0027. Skipped."
+  },
+  "/Users/Ruffeng/Java/Practica_1/src": {
+    "location": "/Users/Ruffeng/Java/Practica_1/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/Ruffeng/Java/Practica_1/src\u0027. Skipped."
   }
 }

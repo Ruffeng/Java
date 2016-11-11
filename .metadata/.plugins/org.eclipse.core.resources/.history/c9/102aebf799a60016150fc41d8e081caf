@@ -1,0 +1,9 @@
+
+public class Competition {
+
+	private Organizer organizer;
+	private int id;
+	private String title;
+	private float target;
+	private boolean isActive;
+}

@@ -1,0 +1,13 @@
+
+public class User {
+	private String username;
+	private String password;
+	private String fullName;
+	
+	public User(String user, String pass, String fullName){
+		this.username = user;
+		this.password = pass;
+		this.fullName = fullName;
+	}
+	
+}

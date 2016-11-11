@@ -1,0 +1,8 @@
+
+public class Organizer extends User {
+
+	public void removeSubmission(Submission submission){
+		
+	}
+
+}

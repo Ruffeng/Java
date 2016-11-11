@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+
+public class Competition {
+
+	private Organizer organizer;
+	private ArrayList<Submission> submissions;
+	private int id;
+	private String title;
+	private float target;
+	private boolean isActive;
+	
+	public float evaluate(Submission submission){
+		return 0;
+	}
+	public Organizer getOwner(){
+		return null;
+	}
+	public Participant getWinner(){
+		return null;
+	}
+	public void sendMessage(String subject, String message){
+		
+	}
+	
+}

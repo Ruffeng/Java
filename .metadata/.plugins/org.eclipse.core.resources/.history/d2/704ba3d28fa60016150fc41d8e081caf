@@ -1,0 +1,12 @@
+
+public class Submission {
+	/**
+	 * Attributes from Submission class
+	 */
+	private int id;
+	private Participant participant;
+	private Competition competition;
+	private SubmissionStatus status;
+	private Date submitedAt;
+	private float prediction;
+}

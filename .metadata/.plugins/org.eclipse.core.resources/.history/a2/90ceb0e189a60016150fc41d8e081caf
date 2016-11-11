@@ -1,0 +1,62 @@
+import java.util.Date;
+
+public class Message {
+	/**
+	 * Attributes for Message Class
+	 */
+	private User from;
+	private User to;
+	private String subject;
+	private String message;
+	private MessageStatus status;
+	private Date createdAt;
+
+	/**
+	 * Methods from Message class
+	 * 		Getters
+	 */
+	
+	/**
+	 * @return the 	from
+	 */
+	public User getFrom() {
+		return null;
+	}
+	/**
+	 * @return the to
+	 */
+	public User getTo() {
+		return null;
+	}
+	/**
+	 * @return the subject
+	 */
+	public String getSubject() {
+		return null;
+	}
+	/**
+	 * @return the message
+	 */
+	public String getMessage() {
+		return null;
+	}
+	/**
+	 * @return the status
+	 */
+	public MessageStatus getStatus() {
+		return null;
+	}
+	/**
+	 * @return the createdAt
+	 */
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+	/**
+	 * Method to show the cotent of the message
+	 */
+	public void read(){
+		
+	}
+	
+}
