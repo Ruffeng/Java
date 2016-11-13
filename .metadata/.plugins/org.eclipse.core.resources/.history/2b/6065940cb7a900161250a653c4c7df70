@@ -47,7 +47,7 @@ public class PR1_Ex2_3_Test {
     }
         
     
-    // Copy constructor
+/*    // Copy constructor
     @Test
    public void userCopyConstructor() {        
         Platform platform = new Platform();
@@ -61,7 +61,7 @@ public class PR1_Ex2_3_Test {
         assertNotNull(u2);
         assertEquals(u1, u2);        
     }
-    
+*/    
     // User specializations    
     @Test
     public void userSpecs() {        
