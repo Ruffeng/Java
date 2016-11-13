@@ -36,7 +36,7 @@ public class User {
 		this.participants = new ArrayList<Participant>();
 		this.organizers = new ArrayList<Organizer>();
 	}
-
+	
 	/**
 	 * Constructor that doesn't digest a password which is already digested.
 	 * Expecting an extra argument that is a boolean.
@@ -62,8 +62,6 @@ public class User {
 	 * ----------------------------------- Public methods for User class
 	 * ----------------------------------
 	 */
-
-
 
 
 	/**

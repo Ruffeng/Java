@@ -36,7 +36,12 @@ public class User {
 		this.participants = new ArrayList<Participant>();
 		this.organizers = new ArrayList<Organizer>();
 	}
+	/**
+	 * Constructor to clone a user
+	 */
+	public User(User u1) {
 
+	}
 	/**
 	 * Constructor that doesn't digest a password which is already digested.
 	 * Expecting an extra argument that is a boolean.
