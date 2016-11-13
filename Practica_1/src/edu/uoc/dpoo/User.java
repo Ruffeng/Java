@@ -14,6 +14,10 @@ public class User {
 	private String username;
 	private String password;
 	private String fullName;
+	/* Attribute to track all competitions that has played as a participant */
+	private ArrayList<Participant> participants; 
+	/* Attribute to track all competitions that has played as a organizer */
+	private ArrayList<Organizer> organizers; 
 
 	/**
 	 * Constructor method for User class
@@ -29,6 +33,7 @@ public class User {
 		this.username = user;
 		this.password = Encrypt.password(pass);
 		this.fullName = fullName;
+		this.participants = new ArrayList<Participant>();
 	}
 
 	/**
@@ -89,6 +94,7 @@ public class User {
 	 * @return Competition
 	 */
 	public ArrayList<Competition> myCompetitions() {
+		
 		return null;
 	}
 
@@ -107,7 +113,15 @@ public class User {
 	 * @return Participant
 	 */
 	public Participant asParticipant() {
-		return null;
+		
+		String name = getUsername();
+		/* Taking the password already digest, so it's not necessary digest it again */
+		String password = getPassword();
+		String fullname = getFullName();
+		
+		Participant participant = new Participant(name,password,fullname);
+		this.participants.add(participant);
+		return participant;
 	}
 
 	/**
