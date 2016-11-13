@@ -34,7 +34,29 @@ public class User {
 		this.password = Encrypt.password(pass);
 		this.fullName = fullName;
 		this.participants = new ArrayList<Participant>();
+		this.organizers = new ArrayList<Organizer>();
 	}
+	
+	/**
+	 * Constructor that doesn't digest a password which is already digested.
+	 * Expecting an extra argument that is a boolean.
+	 * 
+	 * This constructor only will have run when method asParticipant or asOrganizer is invoked.
+	 * To add an extra point of security and robust, we check the status of the boolean, if it's 
+	 * true it won't digest again the password 
+	 * @param user
+	 * @param pass
+	 * @param fullName
+	 * @param checked
+	 */
+	public User(String user, String pass, String fullName, boolean checked) {
+		this.username = user;
+		this.password = (checked) ? pass: Encrypt.password(pass) ;
+		this.fullName = fullName;
+		this.participants = new ArrayList<Participant>();
+		this.organizers = new ArrayList<Organizer>();
+	}
+
 
 	/**
 	 * ----------------------------------- Public methods for User class
@@ -99,27 +121,28 @@ public class User {
 	}
 
 	/**
-	 * Return all competition that the user has been, or is, as organizer.
+	 * Create a new Organizer object.
 	 * 
 	 * @return Organizer
 	 */
 	public Organizer asOrganizer() {
-		return null;
+		
+		/* Taking the password already digest, so it's not necessary digest it again */
+		Organizer organizer = new Organizer(getUsername(),getPassword(),getFullName(),true);
+		this.organizers.add(organizer);
+		return organizer;
 	}
 
 	/**
-	 * Return all competition that the user has been, or is, as participant.
+	 * Create a new Participant object.
 	 * 
 	 * @return Participant
 	 */
 	public Participant asParticipant() {
 		
-		String name = getUsername();
 		/* Taking the password already digest, so it's not necessary digest it again */
-		String password = getPassword();
-		String fullname = getFullName();
 		
-		Participant participant = new Participant(name,password,fullname);
+		Participant participant = new Participant(getUsername(),getPassword(),getFullName(),true);
 		this.participants.add(participant);
 		return participant;
 	}

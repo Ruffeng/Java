@@ -13,8 +13,8 @@ public class Participant extends User {
 	 * @param pass
 	 * @param fullName
 	 */
-	public Participant(String user, String pass, String fullName) {
-			super(user,pass,fullName);	
+	public Participant(String user, String pass, String fullName,boolean digested) {
+			super(user,pass,fullName,digested);	
 		}
 
 	public Submission submitPrediction(Competition competition, Float prediction) {
