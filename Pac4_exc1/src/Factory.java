@@ -124,12 +124,7 @@ public class Factory {
     * the order they were introduced.
     */
    public String listOfOrders() {
-      StringBuilder sb = new StringBuilder();
-      for (Iterator<Order> it = orders.iterator(); it.hasNext();) {
-         Order o = (Order) it.next();
-         sb.append(o.toString() + NL);
-      }
-      return sb.toString();
+     return ordersToString(this.orders);
    }
 
    /**
@@ -187,22 +182,26 @@ public class Factory {
     * by date, using the SortOrdersByDate class.
     * The method works on a copy of the orders list.
     */
-/* 
+
    public String listOrdersSortedByDate() {
-      //TODO
+       ArrayList<Order> orders_sorted = new ArrayList<Order>(this.orders);
+       Collections.sort(orders_sorted,new SortOrdersByDate());
+	   return ordersToString(orders_sorted);
    }
-*/ 
+ 
     /**
     * This method generates and returns the information of
     * every element in the orders list of the factory, ordered
     * by quantity, using the SortOrdersByQuantity class.
     * The method works on a copy of the orders list.
     */
-/*
+
    public String listOrdersSortedByQuantity() {
-      //TODO
+	   ArrayList<Order> orders_sorted = new ArrayList<Order>(this.orders);
+       Collections.sort(orders_sorted,new SortOrdersByQuantity());
+       return ordersToString(orders_sorted);
    }
- */ 
+  
    
    
    /**
@@ -218,5 +217,14 @@ public class Factory {
 	         sb.append(f.toString() + NL);
 	      }
 	      return sb.toString();
+   }
+   
+   private String ordersToString(ArrayList<Order> ord){
+	   StringBuilder sb = new StringBuilder();
+	      for (Iterator<Order> it = ord.iterator(); it.hasNext();) {
+	         Order o = (Order) it.next();
+	         sb.append(o.toString() + NL);
+	      }
+	      return sb.toString();   
    }
 }

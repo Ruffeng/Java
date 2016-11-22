@@ -1,0 +1,4 @@
+
+public interface SortOrdersByDate extends java.util.Comparator<Order> {
+	int compare(Order o1, Order o2);
+}

@@ -107,13 +107,13 @@ public class Main2 {
         System.out.println("-----------------------------------------------------");
 /*
         System.out.println(myF.listOfFurniture());
-*/
+
         // Printing product's information:
          System.out.println("List of products (ordered by id)");
         System.out.println("--------------------------------");
 
         System.out.println(myF.sortedListOfFurniture());
-
+*/
         // ***************************************************
         //   STEP 3 (Creating and listing Orders)
         // ***************************************************
@@ -127,21 +127,21 @@ public class Main2 {
         myF.add(new Order("O004", d.parse("16-10-2016"), 2, fCloset4));
         myF.add(new Order("O005", d.parse("17-10-2016"), 10, fBed));
         myF.add(new Order("O006", d.parse("17-10-2016"), 5, pBed2));
-/*
+
         // Printing order's information:
         System.out.println("********************************");
         System.out.println("       OUTPUT OF STEP 3");
         System.out.println("********************************");
         System.out.println("List of orders (in the order they were introduced)");
         System.out.println("--------------------------------------------------");
-        System.out.println(myF.listOfOrders());
+//        System.out.println(myF.listOfOrders());
         System.out.println("List of orders (sorted by date)");
         System.out.println("-------------------------------");
  //     System.out.println(myF.listOrdersSortedByDate());
         System.out.println("List of orders (sorted by quantity)");
         System.out.println("-------------------------------");
- //     System.out.println(myF.listOrdersSortedByQuantity());
-*/
+      System.out.println(myF.listOrdersSortedByQuantity());
+
         // ***************************************************
         //   STEP 4 (List of furniture within a price range)
         // ***************************************************
