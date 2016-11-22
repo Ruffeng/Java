@@ -72,7 +72,7 @@ public abstract class Furniture implements java.lang.Comparable<Furniture>{
    abstract double price();
 
    /**
-    * This method generates and returns an String with
+    * This method generates and returns an String with	
     * the product identification code.
     */
    public String toString() {
@@ -82,9 +82,9 @@ public abstract class Furniture implements java.lang.Comparable<Furniture>{
    /* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	public int compareTo(Furniture t) {
+	public int compareTo(Furniture o) {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.getId().compareTo(o.getId()) ;
 	}
 
  

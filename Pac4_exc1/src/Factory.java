@@ -1,5 +1,6 @@
 
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Enumeration;
 import java.util.ArrayList;
@@ -114,12 +115,7 @@ public class Factory {
     * the order they were introduced.
     */
    public String listOfFurniture() {
-      StringBuilder sb = new StringBuilder();
-      for (Iterator<Furniture> it = furniture.iterator(); it.hasNext();) {
-         Furniture f = (Furniture) it.next();
-         sb.append(f.toString() + NL);
-      }
-      return sb.toString();
+      return furnitureToString(this.furniture);
    }
 
    /**
@@ -178,8 +174,11 @@ public class Factory {
     */
 
    public String sortedListOfFurniture() {
-	   System.out.println(furniture);
-	   return "";
+	   ArrayList<Furniture> furniture_sorted = new ArrayList<Furniture>(this.furniture);
+	   Collections.sort(furniture_sorted);
+	   // Private method to convert into string
+	  return furnitureToString(furniture_sorted);
+	   
    }
    
     /**
@@ -204,4 +203,20 @@ public class Factory {
       //TODO
    }
  */ 
+   
+   
+   /**
+    * Method that converts the list of furniture into string, depending on the ArrayList that
+    * you send. Thanks to this, is not necessary to use twice the code.
+    * @param furn
+    * @return String
+    */
+   private String furnitureToString(ArrayList<Furniture> furn){
+	   StringBuilder sb = new StringBuilder();
+	      for (Iterator<Furniture> it = furn.iterator(); it.hasNext();) {
+	         Furniture f = (Furniture) it.next();
+	         sb.append(f.toString() + NL);
+	      }
+	      return sb.toString();
+   }
 }
