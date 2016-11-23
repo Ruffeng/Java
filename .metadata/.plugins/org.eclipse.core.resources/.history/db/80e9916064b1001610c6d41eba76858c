@@ -1,0 +1,8 @@
+
+public class Result extends Student {
+
+	public Result(String name, int roll_no, int mark1, int mark2) {
+		super(name, roll_no, mark1, mark2);
+	}
+
+}
