@@ -1,5 +1,6 @@
 
 public class Student {
+	private final String NL = System.getProperty("line.separator");
 	private String name;
 	private int roll_no;
 	private int mark1;
@@ -11,7 +12,6 @@ public class Student {
 	 * @param mark2
 	 */
 	public Student(String name, int roll_no, int mark1, int mark2) {
-		super();
 		this.name = name;
 		this.roll_no = roll_no;
 		this.mark1 = mark1;
@@ -68,8 +68,12 @@ public class Student {
 	
 	
 	public void display() {
-		System.out.println("Student [name=" + name + ", roll_no=" + roll_no + ", mark1="
-				+ mark1 + ", mark2=" + mark2 + "]");
+		System.out.println(		
+				"Name of student: " + name +NL+
+				"Roll No. of Student:" + roll_no +NL+
+				"Marks of Subject1: "+ mark1 +NL+
+				"Marks of Subject2: " + mark2 
+		);
 	}
 	
 	
