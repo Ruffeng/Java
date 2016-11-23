@@ -1,4 +1,0 @@
-
-public enum SubmissionStatus {
-	PENDING,DONE,ERROR
-}

@@ -1,6 +1,0 @@
-
-public class Competition {
-
-	private Organizer organizer;
-	private int id;
-}

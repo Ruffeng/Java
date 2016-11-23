@@ -1,6 +1,0 @@
-package edu.uoc.dpoo;
-
-
-public class Snippet {
-	private ArrayList<Submission> submissions;
-}

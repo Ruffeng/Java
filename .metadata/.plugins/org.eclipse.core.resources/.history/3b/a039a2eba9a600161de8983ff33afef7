@@ -1,5 +1,0 @@
-
-
-public class Snippet {
-	private ArrayList<Submission> submissions;
-}
