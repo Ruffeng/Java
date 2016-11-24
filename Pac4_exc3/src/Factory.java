@@ -52,7 +52,8 @@ public class Factory {
      * @param m material
      */
     public void add(Material m) throws FactoryException {
-        if (m.getPricePerCm2() < 0) {
+        
+    	if (m.getPricePerCm2() < 0) {
             throw new FactoryException(FactoryException.INCORRECT_MATERIAL);
         }
         this.materials.add(m);
@@ -166,9 +167,16 @@ public class Factory {
     * method on class Order, to define whether two Order
     * objects are equals (see description of equals method in
     * class Order)
+     * @throws FactoryException 
     */
-   public boolean removeOrder(Order order) {
-     
+   public boolean removeOrder(Order order) throws FactoryException {
+	      if (this.orders.remove(order)){
+	    	  return true;
+	      }
+	      else{
+	            throw new FactoryException(FactoryException.ORDER_NOT_FOUND);
+	    	  
+	      }
    }
 
 }
