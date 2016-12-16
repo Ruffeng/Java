@@ -76,7 +76,7 @@ public class PR2_Ex1_2_Test {
         // Check exceptions
         
         // Send a message with a null destination username
-        try {
+       try {
             u1.sendMessage(null, msg_subject1, msg_body1);            
             fail();
         } catch (CompetitionException ce) {
@@ -137,7 +137,7 @@ public class PR2_Ex1_2_Test {
         } catch (CompetitionException ex) {
             fail();
         }
-   
+  
     }
 
 }

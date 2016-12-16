@@ -48,7 +48,7 @@ public class Message {
 	 * @return the status
 	 */
 	public MessageStatus getStatus() {
-		return null;
+		return this.status;
 	}
 
 	/**

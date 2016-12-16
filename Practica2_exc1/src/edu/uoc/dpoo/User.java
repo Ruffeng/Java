@@ -100,7 +100,14 @@ public class User implements CompetitionListener {
     }
 
     public List<Message> getMessages() {        
-        return null;
+        List<Message> messagesNotReaded=new ArrayList<Message>();
+    	for(Message message: this.getInbox()){
+        	if (message.getStatus().toString() == "PENDING"){
+        		messagesNotReaded.add(message);
+        	}
+        	
+        }
+    	return messagesNotReaded;
     }
     
     public Message sendMessage(String to, String subject, String message) throws CompetitionException {        
