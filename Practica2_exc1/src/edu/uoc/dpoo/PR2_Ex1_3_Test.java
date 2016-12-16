@@ -88,7 +88,7 @@ public class PR2_Ex1_3_Test {
     @Test
     public void readMessage() {                
         // Check that initially, the inbox and outbox are empty
-   /*     assertEquals(0, u1.getInbox().size());
+        assertEquals(0, u1.getInbox().size());
         assertEquals(0, u1.getOutbox().size());
         assertEquals(0, u2.getInbox().size());
         assertEquals(0, u2.getOutbox().size());        
@@ -106,17 +106,19 @@ public class PR2_Ex1_3_Test {
             
             // Check that the read action works on both sides
             m2.read();            
+      
             assertEquals(MessageStatus.READ, m1.getStatus());
             assertEquals(MessageStatus.READ, m2.getStatus());
             
             // Check that no message is returned as non read
             assertEquals(0, u1.getMessages().size());
             assertEquals(0, u2.getMessages().size());
+        
             
         } catch (CompetitionException ex) {
             fail();
         }
-        */
+        
     }
     
 }

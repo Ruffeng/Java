@@ -24,7 +24,7 @@ public class Message {
     }
 
     public void read() {
-        
+       this.status = MessageStatus.READ;
     }
     
     public MessageStatus getStatus() {        
