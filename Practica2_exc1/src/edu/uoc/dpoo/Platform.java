@@ -77,7 +77,17 @@ public class Platform {
     }
     
     public Message sendMessage(User from, String to, String subject, String message) throws CompetitionException {               
-        return null;
+    	User receiver = this.findUser(to);
+    	if( this.findUser(from.getUserName()) == null){
+    		throw new CompetitionException(CompetitionException.SENDER_NOT_FOUND);
+    	}
+    	if ( to != null && receiver!=null ){
+    		return new Message(from,receiver,subject,message);	
+    	}
+    	else{
+        	throw new CompetitionException(CompetitionException.RECIPIENT_NOT_FOUND);
+    	}
+    	
     }
     
     public void registerCompetition(Competition competition) {

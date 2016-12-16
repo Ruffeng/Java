@@ -104,11 +104,8 @@ public class User implements CompetitionListener {
     }
     
     public Message sendMessage(String to, String subject, String message) throws CompetitionException {        
-    	if (to==null )
-    	{
-    	throw new CompetitionException(CompetitionException.RECIPIENT_NOT_FOUND);
-    	}
-    	return null;
+    	
+    	return this.platform.sendMessage(this, to, subject, message);
     }
         
     public List<Competition> myCompetitions() {

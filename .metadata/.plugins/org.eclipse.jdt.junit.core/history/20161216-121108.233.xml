@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="Practica2_exc1" project="Practica2_exc1" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="edu.uoc.dpoo.TestAll" incomplete="true">
+    <testsuite name="edu.uoc.dpoo.PR1_Ex2_1_Test" incomplete="true">
+      <testcase name="createUserControls" classname="edu.uoc.dpoo.PR1_Ex2_1_Test" incomplete="true"/>
+      <testcase name="createUser" classname="edu.uoc.dpoo.PR1_Ex2_1_Test" incomplete="true"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="edu.uoc.dpoo.PR1_Ex2_2_Test" time="0.0">
+    <testcase name="loginUser" classname="edu.uoc.dpoo.PR1_Ex2_2_Test" time="0.0"/>
+    <testcase name="checkPassword" classname="edu.uoc.dpoo.PR1_Ex2_2_Test" time="0.0"/>
+  </testsuite>
+  <testsuite name="edu.uoc.dpoo.PR2_Ex1_1_Test" time="1.024">
+    <testcase name="createMessage" classname="edu.uoc.dpoo.PR2_Ex1_1_Test" time="0.997"/>
+    <testcase name="toStringMessage" classname="edu.uoc.dpoo.PR2_Ex1_1_Test" time="0.026"/>
+    <testcase name="toStringUser" classname="edu.uoc.dpoo.PR2_Ex1_1_Test" time="0.001"/>
+  </testsuite>
+  <testsuite name="edu.uoc.dpoo.PR1_Ex2_3_Test" time="0.002">
+    <testcase name="userCopyConstructor" classname="edu.uoc.dpoo.PR1_Ex2_3_Test" time="0.0"/>
+    <testcase name="userSpecs" classname="edu.uoc.dpoo.PR1_Ex2_3_Test" time="0.002"/>
+  </testsuite>
+  <testsuite name="edu.uoc.dpoo.PR1_Ex2_1_Test" time="0.001">
+    <testcase name="createUserControls" classname="edu.uoc.dpoo.PR1_Ex2_1_Test" time="0.0"/>
+    <testcase name="createUser" classname="edu.uoc.dpoo.PR1_Ex2_1_Test" time="0.001"/>
+  </testsuite>
+  <testsuite name="edu.uoc.dpoo.PR2_Ex1_2_Test" time="0.0">
+    <testcase name="sendMessage" classname="edu.uoc.dpoo.PR2_Ex1_2_Test" time="0.0"/>
+  </testsuite>
+</testrun>
