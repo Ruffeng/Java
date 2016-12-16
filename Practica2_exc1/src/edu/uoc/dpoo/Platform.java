@@ -75,20 +75,22 @@ public class Platform {
     public Integer getNumCompetitions() {        
         return null;
     }
-    
+
     public Message sendMessage(User from, String to, String subject, String message) throws CompetitionException {               
+    	
+    	User sender =this.findUser(from.getUserName()); 
     	User receiver = this.findUser(to);
-    	if( this.findUser(from.getUserName()) == null){
-    		throw new CompetitionException(CompetitionException.SENDER_NOT_FOUND);
-    	}
-    	if ( to != null && receiver!=null ){
-    		return new Message(from,receiver,subject,message);	
-    	}
-    	else{
-        	throw new CompetitionException(CompetitionException.RECIPIENT_NOT_FOUND);
-    	}
+    	// Check if the sender exists on the system.
+    	if( sender == null) throw new CompetitionException(CompetitionException.SENDER_NOT_FOUND);
+    	// Check that the receiver exists and it's not null.
+    	if ( receiver==null ) throw new CompetitionException(CompetitionException.RECIPIENT_NOT_FOUND);	
+    	Message newMessage=new Message(from,receiver,subject,message);
+    	sender.getOutbox().add(newMessage);
+    	receiver.getInbox().add(newMessage);
+    	return newMessage;
     	
     }
+    
     
     public void registerCompetition(Competition competition) {
 
@@ -98,12 +100,18 @@ public class Platform {
         return null;
     }
     
-    private void evaluateAll() {
-          
-    }
-    
     public void run() {
         // Simulates system call for evaluation
         evaluateAll();
     }
+    
+    
+    /**	
+     * PRIVATE METHODS ----------------
+     * 
+     */
+    private void evaluateAll() {
+        
+    }
+    
 }

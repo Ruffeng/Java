@@ -104,8 +104,7 @@ public class User implements CompetitionListener {
     }
     
     public Message sendMessage(String to, String subject, String message) throws CompetitionException {        
-    	
-    	return this.platform.sendMessage(this, to, subject, message);
+    	return this.platform.sendMessage(this, to, subject, message); 
     }
         
     public List<Competition> myCompetitions() {

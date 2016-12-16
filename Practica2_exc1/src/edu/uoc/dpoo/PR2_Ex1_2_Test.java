@@ -105,15 +105,14 @@ public class PR2_Ex1_2_Test {
         } catch (Exception e) {
             fail();
         }
-/*        
+       
         // Check that initially, the inbox and outbox are empty
         assertEquals(0, u1.getInbox().size());
         assertEquals(0, u1.getOutbox().size());
         assertEquals(0, u2.getInbox().size());
         assertEquals(0, u2.getOutbox().size());        
         assertEquals(0, u3.getInbox().size());
-        assertEquals(0, u3.getOutbox().size());        
-        
+        assertEquals(0, u3.getOutbox().size());                
         // Send message from u1 to u2
         try {
             Message m=u1.sendMessage(username2, msg_subject1, msg_body1);
@@ -133,10 +132,12 @@ public class PR2_Ex1_2_Test {
             assertEquals(0, u2.getOutbox().size());            
             assertEquals(0, u3.getInbox().size());
             assertEquals(0, u3.getOutbox().size());        
+    
+   
         } catch (CompetitionException ex) {
             fail();
         }
-    */
+   
     }
 
 }
