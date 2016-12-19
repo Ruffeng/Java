@@ -25,7 +25,7 @@ public class Organizer extends User {
     	Platform platform = this.getPlatform();
     	Competition competition = new Competition(platform,this, title, target);
     	platform.registerCompetition(competition);
-    	this.competitions.add(competition);
+    	//this.competitions.add(competition);
     	return competition;
     }
 
@@ -34,11 +34,17 @@ public class Organizer extends User {
     }
     
     public List<Competition> getCompetitions() {        
-        return this.competitions;
+    	updateCompetitions();
+    	return this.competitions;
     }
     
     private void updateCompetitions() {
-        
+    	this.competitions =  new ArrayList<Competition>();
+    	for(Competition competition: this.getPlatform().getOpenCompetitions()){
+    		if (competition.getOwner().equals(this)){
+    			this.competitions.add(competition);
+    		}
+    	}
     }
    
 }

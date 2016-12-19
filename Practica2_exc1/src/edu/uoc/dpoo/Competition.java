@@ -14,7 +14,6 @@ public class Competition {
     private List<CompetitionListener> competitionListener;
       
     public Competition(Platform platform, Organizer owner, String title, float target) {
-        // Missing: ID in platform, Default status isActive.
     	this.id = (platform.getNumCompetitions())+1;
     	this.platform = platform;
         this.owner = owner;
