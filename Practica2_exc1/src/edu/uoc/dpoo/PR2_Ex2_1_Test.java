@@ -86,8 +86,9 @@ public class PR2_Ex2_1_Test {
     public void AssociatedObjects() {   
         Organizer o1 = u1.asOrganizer();        
         Competition c1 = o1.newCompetition(comp_title1, comp_target1);       
-        
+
         assertEquals(new Integer(1), platform.getNumCompetitions());
+        System.out.println(o1.getCompetitions().size());
         assertEquals(1, o1.getCompetitions().size());
     }
 }

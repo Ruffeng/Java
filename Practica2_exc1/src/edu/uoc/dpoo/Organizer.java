@@ -25,6 +25,7 @@ public class Organizer extends User {
     	Platform platform = this.getPlatform();
     	Competition competition = new Competition(platform,this, title, target);
     	platform.registerCompetition(competition);
+    	this.competitions.add(competition);
     	return competition;
     }
 
