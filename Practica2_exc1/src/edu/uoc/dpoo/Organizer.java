@@ -30,7 +30,7 @@ public class Organizer extends User {
     }
 
     public void closeCompetition(Competition competition) {
-        
+        competition.close();
     }
     
     public List<Competition> getCompetitions() {        

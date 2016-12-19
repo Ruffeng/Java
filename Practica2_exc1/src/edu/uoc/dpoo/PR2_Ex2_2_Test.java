@@ -73,24 +73,26 @@ public class PR2_Ex2_2_Test {
     
     @Test
     public void listOpenCompetitions() {   
-   /*
+   
     	assertEquals(0, platform.getOpenCompetitions().size());
         
         Organizer o1 = u1.asOrganizer();        
         Competition c1 = o1.newCompetition(comp_title1, comp_target1);        
         o1.closeCompetition(c1);
-                
+        
         assertEquals(0, platform.getOpenCompetitions().size());
         assertEquals(new Integer(1), platform.getNumCompetitions());                        
+  
     }
     
     @Test
     public void testEvent() {  
-        TestUser tu1 = new TestUser(u1);
+    
+    	TestUser tu1 = new TestUser(u1);
         Organizer o1 = u1.asOrganizer();
         Competition c1 = o1.newCompetition(comp_title1, comp_target1);
         c1.addListener(tu1);
-                
+   /*             
         o1.closeCompetition(c1);
         
         assertEquals(1, tu1.numClosed);

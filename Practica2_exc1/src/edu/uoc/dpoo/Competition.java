@@ -3,7 +3,7 @@ package edu.uoc.dpoo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Competition {
+public class Competition implements CompetitionListener{
     private Platform platform;
     private Integer id;
     private String title;
@@ -36,7 +36,7 @@ public class Competition {
     }
         
     public void close() {
-        
+        this.isActive = false;
     }
     
     @Override
@@ -121,7 +121,19 @@ public class Competition {
     }
         
     public void addListener(CompetitionListener listener) {
-        
+       
     }
+
+	@Override
+	public void onNewEvaluation() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onCompetitionClosed() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
