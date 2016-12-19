@@ -92,11 +92,11 @@ public class PR2_Ex2_2_Test {
         Organizer o1 = u1.asOrganizer();
         Competition c1 = o1.newCompetition(comp_title1, comp_target1);
         c1.addListener(tu1);
-   /*             
+                
         o1.closeCompetition(c1);
         
         assertEquals(1, tu1.numClosed);
-    */
+   
     }
     
 }

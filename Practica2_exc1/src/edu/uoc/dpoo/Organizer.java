@@ -40,4 +40,5 @@ public class Organizer extends User {
     private void updateCompetitions() {
         
     }
+   
 }

@@ -3,7 +3,7 @@ package edu.uoc.dpoo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Competition implements CompetitionListener{
+public class Competition {
     private Platform platform;
     private Integer id;
     private String title;
@@ -11,6 +11,7 @@ public class Competition implements CompetitionListener{
     private Boolean isActive;
     private Organizer owner;
     private List<Submission> submissions;
+    private List<CompetitionListener> competitionListener;
       
     public Competition(Platform platform, Organizer owner, String title, float target) {
         // Missing: ID in platform, Default status isActive.
@@ -21,6 +22,7 @@ public class Competition implements CompetitionListener{
         this.target= target;
         this.isActive=true;
         this.submissions = new ArrayList<Submission>();
+        this.competitionListener = new ArrayList<CompetitionListener>();
     }
 
     public float evaluate(Submission submission) {               
@@ -37,6 +39,9 @@ public class Competition implements CompetitionListener{
         
     public void close() {
         this.isActive = false;
+        for(CompetitionListener listener: competitionListener){
+        	listener.onCompetitionClosed();
+        }
     }
     
     @Override
@@ -121,19 +126,12 @@ public class Competition implements CompetitionListener{
     }
         
     public void addListener(CompetitionListener listener) {
-       
+    	this.competitionListener.add(listener);
     }
 
-	@Override
-	public void onNewEvaluation() {
-		// TODO Auto-generated method stub
-		
-	}
+    public void onCompetitionClosed(){
+    	// Notifying the listeners
+    }
 
-	@Override
-	public void onCompetitionClosed() {
-		// TODO Auto-generated method stub
-		
-	}
     
 }

@@ -11,7 +11,10 @@ public class Participant extends User {
     }
 
     public Submission submitPrediction(Competition competition, float prediction) {
-        return null;
+        if(competition.isOpen()){
+        	// Here the code to add a submission
+        }
+    	return null;
     }
     
     public List<Submission> getSubmissions() {        
