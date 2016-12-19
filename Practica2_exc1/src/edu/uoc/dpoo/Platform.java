@@ -98,7 +98,11 @@ public class Platform {
     }    
     
     public List<Competition> getOpenCompetitions() {        
-        return null;
+        List<Competition> openCompetitions = new ArrayList<Competition>();
+        for(Competition competition : this.competitions){
+        	if(competition.isOpen()) openCompetitions.add(competition);
+        }
+    	return openCompetitions;
     }
     
     public void run() {
