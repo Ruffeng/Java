@@ -10,9 +10,10 @@ public class Platform {
        
     public Platform() {
         /**
-         * PR1 Ex 2.1: We need to initialize the list of users
+         * PR1 Ex 2.1: We need to initialize the list of users and competitions
         */
         users = new ArrayList<User>();
+        competitions= new ArrayList<Competition>();
     }
     
     private User findUser(String username) { 
@@ -73,7 +74,7 @@ public class Platform {
     }
     
     public Integer getNumCompetitions() {        
-        return null;
+    	return this.competitions.size();
     }
 
     public Message sendMessage(User from, String to, String subject, String message) throws CompetitionException {               
@@ -93,7 +94,7 @@ public class Platform {
     
     
     public void registerCompetition(Competition competition) {
-
+    	this.competitions.add(competition);
     }    
     
     public List<Competition> getOpenCompetitions() {        

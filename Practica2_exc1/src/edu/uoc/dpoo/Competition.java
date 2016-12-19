@@ -1,5 +1,6 @@
 package edu.uoc.dpoo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Competition {
@@ -12,7 +13,14 @@ public class Competition {
     private List<Submission> submissions;
       
     public Competition(Platform platform, Organizer owner, String title, float target) {
-        
+        // Missing: ID in platform, Default status isActive.
+    	this.id = (platform.getNumCompetitions())+1;
+    	this.platform = platform;
+        this.owner = owner;
+        this.title= title;
+        this.target= target;
+        this.isActive=true;
+        this.submissions = new ArrayList<Submission>();
     }
 
     public float evaluate(Submission submission) {               

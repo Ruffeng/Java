@@ -12,7 +12,6 @@ public class Submission {
     private float error;
       
     public Submission(Participant participant, Competition competition, float prediction) {
-       
     }
     
     public SubmissionStatus getStatus() {       

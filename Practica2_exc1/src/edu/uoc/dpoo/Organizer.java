@@ -22,7 +22,10 @@ public class Organizer extends User {
     }
 
     public Competition newCompetition(String title, float target) {        
-        return null;
+    	Platform platform = this.getPlatform();
+    	Competition competition = new Competition(platform,this, title, target);
+    	platform.registerCompetition(competition);
+    	return competition;
     }
 
     public void closeCompetition(Competition competition) {
