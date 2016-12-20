@@ -12,6 +12,13 @@ public class Submission {
     private float error;
       
     public Submission(Participant participant, Competition competition, float prediction) {
+    	this.id = addId(participant);
+    	this.participant=participant;
+    	this.competition = competition;
+    	this.prediction = prediction;
+    	this.submittedAt = new Date();
+    	this.status = SubmissionStatus.PENDING;
+    	
     }
     
     public SubmissionStatus getStatus() {       
@@ -32,5 +39,13 @@ public class Submission {
     
     public Participant getParticipant() {        
         return this.participant;
+    }
+    
+    /**
+     * PRIVATE METHODS
+     */
+    private Integer addId(Participant participant){
+    	Platform platform = participant.getPlatform();
+    	return (platform.getNumSubmissions()+1) ;
     }
 }

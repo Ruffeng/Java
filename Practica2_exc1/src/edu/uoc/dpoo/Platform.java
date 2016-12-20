@@ -7,6 +7,7 @@ import java.util.List;
 public class Platform {
     private List<User> users;
     private List<Competition> competitions;
+    private List<Submission> submissions;
        
     public Platform() {
         /**
@@ -14,6 +15,7 @@ public class Platform {
         */
         users = new ArrayList<User>();
         competitions= new ArrayList<Competition>();
+        submissions = new ArrayList<Submission>();
     }
     
     private User findUser(String username) { 
@@ -73,8 +75,16 @@ public class Platform {
         return this.users.size();
     }
     
+    public Integer getNumSubmissions() {
+        return this.submissions.size();
+    }
+    
     public Integer getNumCompetitions() {        
     	return this.competitions.size();
+    }
+    
+    public void addSubmission(Submission submission){
+    	this.submissions.add(submission);
     }
 
     public Message sendMessage(User from, String to, String subject, String message) throws CompetitionException {               
