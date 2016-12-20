@@ -126,7 +126,11 @@ public class Platform {
      * 
      */
     private void evaluateAll() {
-        
+    	for(Competition competition: competitions){
+    			evaluateCompetition(competition);
+    	}
     }
-    
+    private void evaluateCompetition(Competition competition){
+    		competition.evaluateAll();
+    }
 }

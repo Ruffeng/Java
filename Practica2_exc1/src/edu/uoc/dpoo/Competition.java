@@ -1,7 +1,10 @@
 package edu.uoc.dpoo;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.List;
+import static java.lang.Math.abs;
 
 public class Competition {
     private Platform platform;
@@ -25,7 +28,10 @@ public class Competition {
     }
 
     public float evaluate(Submission submission) {               
-        return 0.0f;
+    	submission.setError(abs(this.target -submission.getPrediction()));
+    	submission.setStatus(SubmissionStatus.DONE);
+    	notifyListeners();
+    	return submission.getError();
     }
 
     public Organizer getOwner() {        
@@ -41,6 +47,42 @@ public class Competition {
         for(CompetitionListener listener: competitionListener){
         	listener.onCompetitionClosed();
         }
+    }
+    
+   
+    public Participant getWinner() {       
+        return null;
+    }
+
+    public void sendMessage(String subject, String message) {
+
+    }
+    
+    public List<Submission> getSubmissions() {        
+        return submissions;        
+    }
+    
+    public List<Participant> getParticipants() {
+        return null;
+    }
+    
+    public void evaluateAll() {
+       for(Submission submission: submissions){
+    	   checkIfPending(submission);
+       }
+    }
+        
+    public void addListener(CompetitionListener listener) {
+    	this.competitionListener.add(listener);
+    }
+
+    public void onCompetitionClosed(){
+    	// Notifying the listeners
+    }
+
+    public void onNewEvaluation(){
+    	
+    	// Notifying the listeners
     }
     
     @Override
@@ -103,34 +145,25 @@ public class Competition {
 			return false;
 		return true;
 	}
-            
-    public Participant getWinner() {       
-        return null;
-    }
-
-    public void sendMessage(String subject, String message) {
-
-    }
+ 
     
-    public List<Submission> getSubmissions() {        
-        return submissions;        
-    }
     
-    public List<Participant> getParticipants() {
-        return null;
-    }
     
-    public void evaluateAll() {
-       
-    }
-        
-    public void addListener(CompetitionListener listener) {
-    	this.competitionListener.add(listener);
-    }
-
-    public void onCompetitionClosed(){
-    	// Notifying the listeners
-    }
-
     
+    /**
+     * Private methods
+     */
+    private void checkIfPending(Submission submission){
+    	if(submission.getStatus()==SubmissionStatus.PENDING){
+    		evaluate(submission);   		
+    	}
+    }
+	private void notifyListeners(){
+		
+		for(CompetitionListener listener: competitionListener){
+			
+			listener.onNewEvaluation();
+		}
+	}
+	           
 }

@@ -24,6 +24,9 @@ public class Submission {
     public SubmissionStatus getStatus() {       
         return status;
     }
+    public void setStatus(SubmissionStatus status) {        
+        this.status = status;        
+    }
     
     public float getError() {        
         return this.error;
