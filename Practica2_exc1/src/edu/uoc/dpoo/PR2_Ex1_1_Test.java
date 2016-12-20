@@ -98,7 +98,6 @@ public class PR2_Ex1_1_Test {
     public void toStringMessage() throws InterruptedException {        
         // Create a message
         Message m1 = new Message(u1, u2, msg_subject1, msg_body1);
-        System.out.println(m1.toString());
         // Check the strign representation
         String msg = m1.toString();
         

@@ -20,15 +20,15 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
     // Tests for PR1
     edu.uoc.dpoo.PR1_Ex2_1_Test.class,
-//    edu.uoc.dpoo.PR1_Ex2_3_Test.class, 
-//    edu.uoc.dpoo.PR1_Ex2_2_Test.class, 
-//    // Tests for PR2
-//    edu.uoc.dpoo.PR2_Ex1_1_Test.class,
-//    edu.uoc.dpoo.PR2_Ex1_2_Test.class,
-//    edu.uoc.dpoo.PR2_Ex1_3_Test.class,
-//    edu.uoc.dpoo.PR2_Ex2_1_Test.class,
-//    edu.uoc.dpoo.PR2_Ex2_2_Test.class,
-//    edu.uoc.dpoo.PR2_Ex2_3_Test.class,
+    edu.uoc.dpoo.PR1_Ex2_3_Test.class, 
+    edu.uoc.dpoo.PR1_Ex2_2_Test.class, 
+    // Tests for PR2
+    edu.uoc.dpoo.PR2_Ex1_1_Test.class,
+    edu.uoc.dpoo.PR2_Ex1_2_Test.class,
+    edu.uoc.dpoo.PR2_Ex1_3_Test.class,
+    edu.uoc.dpoo.PR2_Ex2_1_Test.class,
+    edu.uoc.dpoo.PR2_Ex2_2_Test.class,
+    edu.uoc.dpoo.PR2_Ex2_3_Test.class,
 //    edu.uoc.dpoo.PR2_Ex3_1_Test.class,
 //    edu.uoc.dpoo.PR2_Ex3_2_Test.class,
 //    edu.uoc.dpoo.PR2_Ex3_3_Test.class,
