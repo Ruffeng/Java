@@ -54,7 +54,7 @@ public class Competition {
     
    
     public Participant getWinner() {       
-        return null;
+        return getSubmissions().isEmpty() ? null : getSubmissions().get(0).getStatus() == SubmissionStatus.DONE? getSubmissions().get(0).getParticipant(): null ;
     }
 
     public void sendMessage(String subject, String message) {
