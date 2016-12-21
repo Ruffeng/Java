@@ -35,7 +35,7 @@ public class Participant extends User {
     	// I put all submissions under control on Platform.
     	this.getPlatform().addSubmission(submission);
     	// Now I update the submissions from specific competition
-    	competition.getSubmissions().add(submission);
+    	competition.addSubmissions(submission);
     	// Finally I update submissions from a specific participant
     	submissions.add(submission);
     }

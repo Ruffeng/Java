@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static java.lang.Math.abs;
@@ -61,12 +62,40 @@ public class Competition {
     }
     
     public List<Submission> getSubmissions() {        
-    	ArrayList<Submission> submission_sorted = new ArrayList<Submission>(this.submissions);
-        Collections.sort(submission_sorted,new CompetitionComparator());
-        for(Submission submission: submission_sorted){
-        	System.out.println(String.format("%.19f", new BigDecimal(submission.getError())));
-        }
-    	return submissions;        
+    	List<Submission> submissionsSorted = new ArrayList<Submission>();
+        List<Submission> submissionsSortedPendingDone = new ArrayList<Submission>();
+        for(Submission submission : submissions){
+            if(submission.getStatus()==SubmissionStatus.DONE) {
+              submissionsSorted.add(submission);
+              } 
+          }
+            for(Submission submission : submissions){
+            if(submission.getStatus()!=SubmissionStatus.DONE) {
+              submissionsSortedPendingDone.add(submission);
+              } 
+          }
+        
+        
+        
+        System.out.println("JUST SUBMISSIONS----------------------------");
+         for(Submission submission: submissionsSorted){
+             System.out.println(submission.getStatus()+" - "+String.format("%.19f", new BigDecimal(submission.getError())));
+             
+           }    
+    	Collections.sort(submissionsSorted );
+    	Collections.sort(submissionsSortedPendingDone );
+    	for(Submission submission: submissionsSortedPendingDone){
+            submissionsSorted.add(submission);
+          }
+    	
+    	
+    	
+    	 System.out.println("JUST after----------------------------");
+         for(Submission submission: submissionsSorted){
+             System.out.println(submission.getStatus()+" - "+String.format("%.19f", new BigDecimal(submission.getError())));
+             
+           }    
+    	return submissionsSorted;        
     }
     
     public List<Participant> getParticipants() {
@@ -90,6 +119,9 @@ public class Competition {
     public void onNewEvaluation(){
     	
     	// Notifying the listeners
+    }
+    public void addSubmissions(Submission submission){
+    	this.submissions.add(submission);
     }
     
     @Override
@@ -152,10 +184,6 @@ public class Competition {
 			return false;
 		return true;
 	}
- 
-    
-    
-    
     
     /**
      * Private methods
@@ -173,6 +201,6 @@ public class Competition {
 		}
 	}
 
-	
-	           
+
+	       
 }

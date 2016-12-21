@@ -59,12 +59,13 @@ public class PR2_Ex2_1_Test {
         Organizer o1 = u1.asOrganizer();
         
         Competition c1 = o1.newCompetition(comp_title1, comp_target1);
-        
+       
         assertNotNull(c1);
         assertEquals(o1, c1.getOwner());        
         assertTrue(c1.isOpen()); 
         assertNotNull(c1.getSubmissions());
         assertEquals(0, c1.getSubmissions().size());
+        
     }
     
     @Test

@@ -79,8 +79,9 @@ public class PR2_Ex3_3_Test {
         Submission s2=p2.submitPrediction(c1, comp1_pred2);  
         
         platform.run();
-        assertEquals(2,c1.getSubmissions().size());     
-    /*
+        
+        assertEquals(2,c1.getSubmissions().size());
+    
         assertEquals(s1,c1.getSubmissions().get(0));     
         assertEquals(s2,c1.getSubmissions().get(1));     
                 
@@ -92,8 +93,8 @@ public class PR2_Ex3_3_Test {
         assertEquals(s4,c2.getSubmissions().get(1));                             
         platform.run();
         assertEquals(2,c2.getSubmissions().size());     
-        assertEquals(s4,c2.getSubmissions().get(0));     
+       assertEquals(s4,c2.getSubmissions().get(0));     
         assertEquals(s3,c2.getSubmissions().get(1));                             
-    */
+    
     }
 }

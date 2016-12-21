@@ -2,7 +2,7 @@ package edu.uoc.dpoo;
 
 import java.util.Date;
 
-public class Submission {
+public class Submission implements Comparable<Submission> {
     private Integer id;
     private Participant participant;
     private Competition competition;    
@@ -51,4 +51,11 @@ public class Submission {
     	Platform platform = participant.getPlatform();
     	return (platform.getNumSubmissions()+1) ;
     }
+
+	@Override
+	public int compareTo(Submission s1) {
+		  return this.getError() < s1.getError() ? -1 
+		             : this.getError() > s1.getError() ? 1 
+		             : 0;
+	}
 }
