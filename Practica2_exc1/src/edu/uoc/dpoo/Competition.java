@@ -62,39 +62,18 @@ public class Competition {
     }
     
     public List<Submission> getSubmissions() {        
+    	// Create 2 lists
     	List<Submission> submissionsSorted = new ArrayList<Submission>();
         List<Submission> submissionsSortedPendingDone = new ArrayList<Submission>();
-        for(Submission submission : submissions){
-            if(submission.getStatus()==SubmissionStatus.DONE) {
-              submissionsSorted.add(submission);
-              } 
-          }
-            for(Submission submission : submissions){
-            if(submission.getStatus()!=SubmissionStatus.DONE) {
-              submissionsSortedPendingDone.add(submission);
-              } 
-          }
-        
-        
-        
-        System.out.println("JUST SUBMISSIONS----------------------------");
-         for(Submission submission: submissionsSorted){
-             System.out.println(submission.getStatus()+" - "+String.format("%.19f", new BigDecimal(submission.getError())));
-             
-           }    
-    	Collections.sort(submissionsSorted );
+        // Add elements to arrays
+        iterateSubmissions(submissionsSorted,true);
+        iterateSubmissions(submissionsSortedPendingDone,false);   
+    	// Sorting Arrays
+        Collections.sort(submissionsSorted );
     	Collections.sort(submissionsSortedPendingDone );
-    	for(Submission submission: submissionsSortedPendingDone){
-            submissionsSorted.add(submission);
-          }
+    	// Apending into one
+    	appendSubmissionsIntoOne(submissionsSorted,submissionsSortedPendingDone);
     	
-    	
-    	
-    	 System.out.println("JUST after----------------------------");
-         for(Submission submission: submissionsSorted){
-             System.out.println(submission.getStatus()+" - "+String.format("%.19f", new BigDecimal(submission.getError())));
-             
-           }    
     	return submissionsSorted;        
     }
     
@@ -200,7 +179,44 @@ public class Competition {
 			listener.onNewEvaluation();
 		}
 	}
-
-
-	       
+	
+	private List<Submission> iterateSubmissions(List<Submission> submissionsSorted, boolean status){
+		/**
+		 * Status = TRUE -> DONE STATUS
+		 * Status = False -> PENDING/ERROR STATUS
+		 */
+		for(Submission submission : submissions){    
+			checkStatus(status,submissionsSorted,submission);
+          }
+		return submissionsSorted;
+	}
+	
+	private List<Submission> checkStatus(boolean status, List<Submission> submissionsSorted,Submission submission){
+		if(status){
+			addDoneSubmissions(submissionsSorted,submission);
+		}
+		else{
+			addRestSubmissions(submissionsSorted,submission);
+		}
+		return submissionsSorted;
+	}
+	private List<Submission> addDoneSubmissions(List<Submission> submissionsSorted,Submission submission){
+		if(submission.getStatus()==SubmissionStatus.DONE) {
+             submissionsSorted.add(submission);
+        } 
+		return submissionsSorted;
+	}
+	private List<Submission> addRestSubmissions(List<Submission> submissionsSorted, Submission submission){
+		if(submission.getStatus()!=SubmissionStatus.DONE) {
+            submissionsSorted.add(submission);
+       } 
+		return submissionsSorted;
+	}
+	
+	private List<Submission> appendSubmissionsIntoOne(List<Submission> submissionsSorted,List<Submission> submissionsSortedPendingDone){
+		for(Submission submission: submissionsSortedPendingDone){
+            submissionsSorted.add(submission);
+          }
+		return submissionsSorted;
+	}       
 }
